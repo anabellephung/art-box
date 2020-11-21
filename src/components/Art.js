@@ -12,6 +12,7 @@ class Art extends React.Component {
     super(props);
     this.state = {
       mood: '',
+      noMood: true,
       bgColor: '',
       value: '',
       art: [],
@@ -81,13 +82,14 @@ class Art extends React.Component {
   handleMood(e) {
     const moodValue = e.target.value
     this.setState({
-      mood: moodValue
+      mood: moodValue,
+      noMood: false
     });
 
     const colorRef = {
       lofi: 'cadetblue',
       house: 'darkgoldenrod',
-      acoustic: 'lightsalmon',
+      acoustic: 'salmon',
       love: 'darkslateblue',
       alternative: 'darkslategray',
       jazz: 'firebrick',
@@ -134,10 +136,18 @@ class Art extends React.Component {
                 </Link>
               <h2>Art Box</h2>
             </div>
-            <ResponsivePlayer
-              genre={searchTerm}
-              color={color}
-            />
+            {this.state.noMood ?
+              (
+                <p className="noMoodMsg">Select a mood above to curate a theme!</p>
+              )
+              :
+              (
+                <ResponsivePlayer
+                  genre={searchTerm}
+                  color={color}
+                />
+              )
+            }
             <div className="container">
               <div className="artBox">
                 <SearchBar 

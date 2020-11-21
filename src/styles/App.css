@@ -1,0 +1,9 @@
+@import './setup.css';
+@import './cssReset.css';
+@import './variables.css';
+@import './generalStyles.css';
+@import './Header.css';
+@import './MoodSelection.css';
+@import './Art.css';
+@import './Footer.css';
+@import './mediaQueries.css';

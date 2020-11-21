@@ -1,0 +1,13 @@
+:root {
+  /* Font Stack */
+	--headingFont: 'Poiret One', cursive;
+  --bodyFont: 'Roboto Mono', monospace;
+  --light: '300';
+  --semi-bold: '600';
+
+  /* Colors */
+  --primaryDark: #1b1919;
+  --primaryLight: #f8f0f0;
+  --gold: #d48a0d;
+  --purple: #6261f9;
+}
