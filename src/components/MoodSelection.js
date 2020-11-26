@@ -14,7 +14,7 @@ export default function MoodSelection(props) {
               value={props.mood} 
               onChange={props.handleMood}
               >
-              <option></option>
+              <option>--</option>
               <option value="lofi">Calm</option>
               <option value="house">Cheerful</option>
               <option value="acoustic">Lighthearted</option>

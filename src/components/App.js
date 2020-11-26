@@ -8,6 +8,7 @@ import swal from 'sweetalert';
 export default function App () {
   const [checked, setChecked] = useState(false);
 
+  // if checked, and component fades in, display modal
   const handleChange = () => {
     setChecked((prev) => !prev);
     setTimeout(() => {
@@ -16,7 +17,7 @@ export default function App () {
         text: "Let us know how you're feeling tonight, and we'll match it perfectly!",
         button: "GOTCHA 👌",
       });
-    }, 2000);
+    }, 1500);
   }
 
   return (

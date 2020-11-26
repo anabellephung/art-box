@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button (props) {
+ export default function Button (props) {
   return (
     <>
       <div className="ticket">
@@ -11,5 +11,3 @@ function Button (props) {
     </>
   )
 }
-
-export default Button;

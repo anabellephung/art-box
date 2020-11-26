@@ -13,6 +13,7 @@ class ResponsivePlayer extends React.Component {
     }
   }
 
+  // as soon as 'mood' is selected in previous section (mood selection), click play button and a video list will be displayed in a responsive carousel
   handleMusic() {
     this.setState({
       isLoading: true
@@ -28,6 +29,7 @@ class ResponsivePlayer extends React.Component {
         isLoading: false
       })
     })
+    // error handling for youtube music video axios call
     .catch(err => {
       if (err.response) {
         // client received an error response (5xx, 4xx)
@@ -61,6 +63,7 @@ class ResponsivePlayer extends React.Component {
     const genre = this.props.genre
     const color = this.props.color
     const videos = this.state.videoIds
+    // react-slick carousel settings
     const settings = {
       dots: true,
       infinite: true,

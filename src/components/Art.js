@@ -21,9 +21,11 @@ class Art extends React.Component {
     };
   }
 
+  // axios call for art gallery search
   getArt = userInput => {
     this.setState({
-      isLoading: true
+      isLoading: true,
+      art: []
     })
     const searchUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=" + userInput;
     axios
@@ -37,6 +39,7 @@ class Art extends React.Component {
           })
         }
         else {
+          // display one random piece of art from list of art that correlates with user input value
           const randomArtId = artIds[Math.floor(Math.random() * artIds.length)];
           const requestUrl = "https://collectionapi.metmuseum.org/public/collection/v1/objects/" + randomArtId;
           return axios.get(requestUrl)
@@ -50,6 +53,7 @@ class Art extends React.Component {
           isLoading: false
         })
       })
+      // error handling for art gallery search axios call
       .catch(err => {
         if (err.response) {
           // client received an error response (5xx, 4xx)
@@ -79,6 +83,7 @@ class Art extends React.Component {
       })
   }
 
+  // handles mood selection in correlation to theme of 'art box' (music genre, background color)
   handleMood(e) {
     const moodValue = e.target.value
     this.setState({
@@ -100,6 +105,7 @@ class Art extends React.Component {
     })
   }
 
+  // art gallery search input value - value change
   handleChange(e) {
     const searchValue = e.target.value;
     this.setState({
@@ -107,6 +113,7 @@ class Art extends React.Component {
     });
   }
 
+  // art gallery search input value - value submit
   handleSubmit(e) {
     e.preventDefault();
     const input = this.state.value
@@ -116,7 +123,8 @@ class Art extends React.Component {
   render() {
     const artPiece = this.state.art;
     const color = this.state.bgColor;
-    const searchTerm = this.state.mood
+    const searchTerm = this.state.mood;
+    const comment = this.state.comment;
     return (
       <>
       <main>
@@ -135,9 +143,11 @@ class Art extends React.Component {
                   </button>
                 </Link>
               <h2>Art Box</h2>
+              <p>{comment}</p>
             </div>
             {this.state.noMood ?
-              (
+              ( 
+                // if no mood is chosen, responsive player will not display
                 <p className="noMoodMsg">Select a mood above to curate a theme!</p>
               )
               :
@@ -171,6 +181,7 @@ class Art extends React.Component {
                 {this.state.isNull ?
                   (
                     <div className="artContainer">
+                      <div className="artBgImg"></div>
                       <p className="errMsg">No art was found. Please try again.</p>
                       <span
                         className="errImg"
@@ -184,12 +195,19 @@ class Art extends React.Component {
                   :
                   (
                     <div className="artContainer">
-                      <h3>{artPiece.title}</h3>
-                      <p>
-                        {artPiece.artistDisplayName} {artPiece.objectDate}
-                      </p>
-                      <img src={artPiece.primaryImageSmall} alt={artPiece.title} />
-                      <p>{artPiece.medium}</p>
+                      <div className="artBgImg"></div>
+                      <div className="pieceBox">
+                        <div className="mat">
+                            <img src={artPiece.primaryImageSmall} alt={artPiece.title} />
+                        </div>
+                        {/* <img src={artPiece.primaryImageSmall} alt={artPiece.title}/> */}
+                      </div>
+                      <div className="artTextBox">
+                        <h3>{artPiece.title}</h3>
+                        <p className="artistName">{artPiece.artistDisplayName}</p>
+                        <time className="pieceDate">{artPiece.objectDate}</time>
+                        <p className="pieceMedium">{artPiece.medium}</p>
+                      </div>
                     </div>
                   )
                 }

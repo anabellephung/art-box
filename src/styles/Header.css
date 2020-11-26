@@ -1,0 +1,135 @@
+header {
+  background: url(../assets/headerBg.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 3vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--primaryDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.dot {
+  animation-name: blink;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.dot:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: .4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .2;
+  }
+}
+
+.lineBreak {
+  font-size: clamp(4.5rem, 6vw, 7rem);
+  text-decoration: underline;
+  display: block;
+  background-image: url(https://media.giphy.com/media/13tfiE260zqGTC/giphy.gif);
+	background-size: cover;
+  color: transparent;
+  background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+}
+
+@supports (-webkit-text-stroke: 1px var(--gold)) {
+  .lineBreak {
+    -webkit-text-stroke: 1px var(--gold);
+  }
+}
+
+.ticket {
+  position: relative;
+  border: 2px solid var(--gold);
+  background: var(--purple);
+  display: inline-block;
+  padding: 1em 2em;
+  margin-top: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ticket:before,
+.ticket:after{
+  content: '';
+  position: absolute;
+  top: 25px;
+  height: 20px;
+  width: 10px;
+  border: 2px solid var(--gold);
+}
+
+.ticket:before {
+  left: -2px;
+  border-radius: 0 1em 1em 0;
+  border-left-color: var(--purple);
+}
+
+.ticket:after {
+  right: -2px;
+  border-radius: 1em 0 0 1em;
+  border-right-color: var(--purple);
+}
+
+.ticket:hover,
+.ticket:focus,
+.ticket:active {
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.ticketBreak {
+  width: 2px;
+  height: 10px;
+  background: var(--gold);
+  position: absolute;
+  right: 15%;
+  box-shadow: 0 20px var(--gold);
+}
+
+.breakOne {
+  top: 0;
+}
+
+.breakTwo {
+  top: 57%;
+}
+
+.enterButton {
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  background: var(--purple);
+}
+
+@supports (-webkit-text-stroke: 1px var(--gold)) {
+  .enterButton {
+    -webkit-text-stroke: 1px var(--gold);
+    -webkit-text-fill-color: var(--gold);
+  }
+}
