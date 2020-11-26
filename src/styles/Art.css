@@ -128,6 +128,7 @@
 .commentBox {
   text-align: center;
   width: 100%;
+  padding: 10px 0;
 }
 
 .artBox label,
@@ -211,7 +212,7 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   border: 1px solid var(--primaryLight);
   position: relative;
 }
@@ -224,7 +225,7 @@ input[type="text"]:focus {
 }
 
 .artTextBox {
-  width: 300px;
+  width: 450px;
   height: 150px;
   overflow-y: auto;
   padding: 10px 20px;
@@ -239,15 +240,17 @@ input[type="text"]:focus {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  margin-top: 5px;
 }
 
-.artContainer p {
-  font-size: 1.3rem;
+.artContainer p,
+.artContainer time {
+  font-size: 1.2rem;
 }
 
 .pieceBox {
-  width: 150px;
+  width: 250px;
   height: 150px;
   padding: 5px;
   border-radius: 5px;
