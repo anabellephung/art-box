@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/art-box/static/css/main.a2986a18.chunk.css",
-    "main.js": "/art-box/static/js/main.811836c6.chunk.js",
-    "main.js.map": "/art-box/static/js/main.811836c6.chunk.js.map",
+    "main.css": "/art-box/static/css/main.9b52bb5a.chunk.css",
+    "main.js": "/art-box/static/js/main.f4ca1813.chunk.js",
+    "main.js.map": "/art-box/static/js/main.f4ca1813.chunk.js.map",
     "reactPlayerDailyMotion.js": "/art-box/static/js/reactPlayerDailyMotion.218dc2f1.chunk.js",
     "reactPlayerDailyMotion.js.map": "/art-box/static/js/reactPlayerDailyMotion.218dc2f1.chunk.js.map",
     "reactPlayerFacebook.js": "/art-box/static/js/reactPlayerFacebook.670375f3.chunk.js",
@@ -34,14 +34,14 @@
     "static/js/15.820b99e6.chunk.js": "/art-box/static/js/15.820b99e6.chunk.js",
     "static/js/15.820b99e6.chunk.js.map": "/art-box/static/js/15.820b99e6.chunk.js.map",
     "index.html": "/art-box/index.html",
-    "static/css/main.a2986a18.chunk.css.map": "/art-box/static/css/main.a2986a18.chunk.css.map",
+    "static/css/main.9b52bb5a.chunk.css.map": "/art-box/static/css/main.9b52bb5a.chunk.css.map",
     "static/js/14.cade9df5.chunk.js.LICENSE.txt": "/art-box/static/js/14.cade9df5.chunk.js.LICENSE.txt",
     "static/media/App.css": "/art-box/static/media/musicBgImg.47644a2b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe40b664.js",
     "static/js/14.cade9df5.chunk.js",
-    "static/css/main.a2986a18.chunk.css",
-    "static/js/main.811836c6.chunk.js"
+    "static/css/main.9b52bb5a.chunk.css",
+    "static/js/main.f4ca1813.chunk.js"
   ]
 }
