@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDcyDDaL5p0c_3on7BRZIH8BcgINkRXC-4",
-  authDomain: "commentbox-a68c6.firebaseapp.com",
-  databaseURL: "https://commentbox-a68c6.firebaseio.com",
-  projectId: "commentbox-a68c6",
-  storageBucket: "commentbox-a68c6.appspot.com",
-  messagingSenderId: "754571659579",
-  appId: "1:754571659579:web:096bb7e16b3a2279f50f1e"
+  apiKey: "AIzaSyAirx7j5ylp40nLlnE2213u1UYIyR8g84s",
+  authDomain: "commentBox-46114.firebaseapp.com",
+  projectId: "commentBox-46114",
+  storageBucket: "commentBox-46114.appspot.com",
+  messagingSenderId: "928770988354",
+  appId: "1:928770988354:web:20e5fa82d75dae941590db"
+
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

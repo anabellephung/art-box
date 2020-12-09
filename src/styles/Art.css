@@ -302,7 +302,7 @@ h3 {
 
 .savedThoughts {
   text-align: left;
-  height: 170px;
+  height: 100%;
   margin-top: 2px;
   padding: 8px;
   overflow-y: auto;

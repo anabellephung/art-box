@@ -19,11 +19,15 @@
   }
 
   .commentBox {
-    height: 200px;
+    height: 150px;
   }
 
   .artBox {
-    height: 325px;
+    height: 350px;
+  }
+
+  .artBox form {
+    margin-bottom: 10px;
   }
 
   .pieceBox,
@@ -31,10 +35,13 @@
     margin-bottom: 10px;
   }
 
-  .pieceBox,
-  .artTextBox {
+  .pieceBox {
     width: 300px;
     height: 100px;
+  }
+
+  .artTextBox {
+    height: 135px;
   }
 
   .artContainer p,
